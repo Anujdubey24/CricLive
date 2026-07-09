@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>AD WEB LOGIN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: #003333">
+        <h1 style="color:red;text-align:center">Registration</h1>
+        <form  method="post" action="Register">
+            <pre>
+            <div align="center">
+            
+<b style="color:whitesmoke">Enter your Name:<b style="color:red">*</b></b> 
+<input style="color:black" type="text" name="name" required>
+
+<b style="color:whitesmoke">Enter your Email:<b style="color:red">*</b></b> 
+<input style="color:black" type="email" name="mail" required>
+
+<b style="color:whitesmoke">Enter your Mobile No.:<b style="color:red">*</b></b> 
+<input style="color:black" type="text" pattern="[6789][0-9]{9}" name="mob" required>
+
+<b style="color:whitesmoke">Enter Password:<b style="color:red">*</b></b>
+<input style="color:black" type="password" id="pwd1" name="pwd" required>
+
+<b style="color:whitesmoke">Enter Confirm Password:<b style="color:red">*</b></b>
+        <input style="color:black" type="password" id="pwd2" required><span style="color:red" id="one"></span>        
+
+<input type="submit" value="Register" onclick="return valid()">
+            
+            </div>
+            </pre>
+        </form>
+        <script src="JS/Valid_password.js"></script>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>AD WEB LOGIN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: "Poppins",sans-serif;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* REMOVE the old background image */
+            /* background: url("images/robot.jpg") no-repeat center center/cover; */
+
+            position: relative;
+            overflow: hidden; /* hides outside video edges */
+        }
+        
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  /* same as background-size: cover */
+            z-index: -1; /* put video behind everything */
+        }
+
+
+        .container{
+            width: 850px;
+            height: 500px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 20px;
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            overflow: hidden;
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        @keyframes fadeIn{
+            from { opacity: 0; transform: scale(0.5); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+        
+        .left img{
+            height: 40%;
+            width: 350px;
+            border-radius: 10px;
+            object-fit: cover;
+            animation: slideLeft 1.5s ease-out,fadeIn 1.5s ease;
+        }
+        
+        @keyframes slideLeft{
+            from { opacity: 0; transform: translateX(40px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+        
+        .left h2{
+            color: #fff;
+            margin-top: 40px;
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .right{
+            flex: 1;
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: slideRight 1.5s ease-in;
+        }
+        
+        @keyframes slideRight{
+            from { opacity: 0; transform: translateX(400px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+        
+        .right h2{
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .right p{
+            margin-bottom: 25px;
+            opacity: .7;
+        }
+
+        .input-box{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .input-box input{
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .btn{
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #fff;
+            color: #000;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .footer-text{
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer-text a{
+            color: #fff;
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <video class="bg-video" autoplay loop muted playsinline>
+            <source src="videos/BG2.mp4" type="video/mp4">
+        </video>
+        
+        <div class="container">
+            
+            <div class="left">
+                <img src="images/Cricket.jpg" alt="cricket logo"/>
+                <h2>LIVE SCORE</h2>
+            </div>
+            
+        <div class="right">
+            <form action="CheckLogin">
+            <h2>LOGIN</h2>
+        
+        <div class="input-box">
+            <input type="email" placeholder="Enter Email">
+        </div>
+
+        <div class="input-box">
+            <input type="password" placeholder="Password">
+        </div>
+            
+        <button class="btn">Sign In</button>
+
+        <p class="footer-text">
+            Don't have an account? <a href="register.html">Create Account</a>
+        </p>
+        </form>
+    </div>
+            
+        </div>
+    </body>
+</html>
